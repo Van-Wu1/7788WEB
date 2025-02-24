@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset ="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            数据可视化
+        </title>
+        <link rel="stylesheet" href="../css/index.css" />
+    </head>
+    <body>
+        <!--头部盒子-->
+        <header>
+            <h1>欢迎来到烦烦摸鱼直播间</h1>
+            <div class="ShowTime"></div>
+            <script>
+                var t =null;
+                t = setTimeout(time,1000);
+                function time(){
+                    clearTimeout(t);
+                    dt = new Date();
+                    var y = dt.getFullYear();
+                    var mt = dt.getMonth() + 1;
+                    var day = dt.getDate();
+                    var h = dt.getHours();
+                    var m = dt.getMinutes();
+                    var s = dt.getSeconds();
+                    document.querySelector(".ShowTime").innerHTML = '当前时间：' + y + "年" + mt + "月" + day + "日" + "-" + h + "时" + m + "分" + s + "秒";
+                    t = setTimeout(time,1000);
+                }
+            </script>
+        </header>
+
+        <!--页面主体部分-->
+        <section class="mainbox">
+            <div class="column">""
+                <div class="panel bar">
+                    <h2>不知道是啥</h2>
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="panel line">
+                    <h2>不知道是啥</h2>
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="panel pie">
+                    <h2>不知道是啥</h2>
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+            <div class="column">""
+                <!--no模块制作-->
+                <div class="no">
+                    <div class="no-hd">
+                        <ul>
+                            <li>123456
+                                <div class="li"></div>
+                            </li>
+                            <li>456789</li>
+                        </ul>
+                    </div>
+                    <div class="no-bd">
+                        <ul>
+                            <li>！直播间在线人数！</li>
+                            <li>！新增粉丝数！</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map">
+                    <div class="map1"></div>
+                    <div class="map2"></div>
+                    <div class="map3"></div>
+                    <div class="chart"></div>
+                </div>
+            </div>
+            <div class="column">""
+                <div class="panel emoji">
+                    <h2>不知道是啥</h2>
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="panel cow">
+                    <h2>不知道是啥</h2>
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="panel reli">
+                    <h2>不知道是啥</h2>
+                    <div class="chart"></div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+
+
+        </section>
+        <script src="../js/flexible.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>
